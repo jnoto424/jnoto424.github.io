@@ -90,7 +90,7 @@
 </style>
 
 <section class="hero">
-  <p class="hero-eyebrow">Data Analytics · Business Intelligence · Systems Analysis</p>
+  <p class="hero-eyebrow">Data Analytics · Business Intelligence · Information Systems</p>
 
   <h1>Joseph Noto</h1>
 
