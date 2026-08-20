@@ -249,7 +249,7 @@ Bachelor of Science in Management Information Systems
     <p class="project-type">Database Management · Database Design</p>
     <h3>Relational Hospital Database</h3>
     <p>
-      Designed an Entity-Relationship Diagram (ERD) modeling relationships between entities within a sample hospital. Built normalized tables with relational constraints to ensure data integrity and proper data loading. Performed aggregation queries across multiple tables to analyze hospital operations and generate insights.
+     Built normalized tables with relational constraints to ensure data integrity and proper data loading for a sample hospital. Performed aggregation queries across multiple tables to analyze hospital operations and generate insights.
     </p>
     <p class="project-tech">
       SQL · MySQL · ERD 
