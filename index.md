@@ -97,9 +97,8 @@
   <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
 
   <p class="hero-description">
-    I combine computer science, data analytics, and business information systems
-    to solve business problems, improve processes, and turn data into actionable
-    insights.
+    I combine data analytics, computer science, and business information systems
+    to solve business problems, improve processes, and make a positive impact.
   </p>
 
   <div class="hero-links">
