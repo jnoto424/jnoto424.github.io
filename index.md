@@ -1,37 +1,16 @@
-# Joseph Noto
+# JOSEPH NOTO
 
-## Computer Science | Data Analytics | Business Intelligence
+Computer Science graduate student at Penn with a background in Management Information Systems, focused on using data and technology to solve business problems.
 
-Computer Science graduate student at the University of Pennsylvania with a background in Management Information Systems.
+[GitHub] [LinkedIn] [Resume]
 
 ## Featured Projects
 
-### Life Expectancy Prediction
+*Life Expectancy Prediction
+Python · Pandas · Scikit-learn · Ridge Regression
 
-Machine learning project using World Bank health indicators to predict life expectancy.
+*Big Data Analytics
+PySpark · Spark SQL · Python
 
-**Technologies:** Python, Pandas, Scikit-learn, Ridge Regression
-
-### Big Data Analytics
-
-Data analytics project using Spark and PySpark to process and analyze large datasets.
-
-**Technologies:** PySpark, Spark SQL, Python
-
-### Machine Learning
-
-Machine learning projects involving classification, regression, SVMs, Random Forests, PCA, and clustering.
-
-**Technologies:** Python, Scikit-learn
-
-## Skills
-
-Python · SQL · PySpark · Pandas · Scikit-learn · Java · Tableau · Machine Learning
-
-## Education
-
-**University of Pennsylvania**  
-Master of Applied Science in Computer Science
-
-**Pennsylvania State University**  
-Bachelor of Science in Management Information Systems
+*Machine Learning Projects
+SVM · Random Forest · PCA · K-Means
