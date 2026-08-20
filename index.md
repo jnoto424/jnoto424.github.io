@@ -238,11 +238,26 @@ Bachelor of Science in Management Information Systems
       for article search, trending topics, popularity analysis, and database statistics.
     </p>
     <p class="project-tech">
-      Java · Object-Oriented Programming · Data Structures
+      Java · Object-Oriented Programming · Data Structures · Eclipse
     </p>
     <div class="project-links">
       <a href="#" target="_blank" rel="noopener noreferrer">Read More</a>
     </div>
   </article>
+
+  <article class="project-card">
+    <p class="project-type">Database Management · Database Design</p>
+    <h3>Relational Hospital Database</h3>
+    <p>
+      Designed an Entity-Relationship Diagram (ERD) modeling relationships between entities within a sample hospital. Built normalized tables with relational constraints to ensure data integrity and proper data loading. Performed aggregation queries across multiple tables to analyze hospital operations and generate insights.
+    </p>
+    <p class="project-tech">
+      SQL · MySQL · ERD 
+    </p>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener noreferrer">Read More</a>
+    </div>
+  </article>
+
 
 </div>
