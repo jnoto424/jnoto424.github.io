@@ -6,11 +6,11 @@ Computer Science graduate student at Penn with a background in Management Inform
 
 ## Featured Projects
 
-*Life Expectancy Prediction
+*Life Expectancy Prediction*
 Python · Pandas · Scikit-learn · Ridge Regression
 
-*Big Data Analytics
+*Big Data Analytics*
 PySpark · Spark SQL · Python
 
-*Machine Learning Projects
+*Machine Learning Projects*
 SVM · Random Forest · PCA · K-Means
