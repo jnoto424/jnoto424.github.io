@@ -121,24 +121,130 @@ Master of Applied Science in Computer Science
 **Pennsylvania State University**  
 Bachelor of Science in Management Information Systems
 
-## Featured Projects
+<!-- Add this section after your introduction/skills section -->
 
-### Global Health & Life Expectancy Analysis
+<style>
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0 3rem;
+  }
 
-Big Data Analytics and Machine Learning project focused on using World Bank Health, Nutrition, and Population Statistics to find significant predictors of life expectancy.
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 310px;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
 
-Steps included filtering and cleaning the raw dataset, grouping countries together using K-Means clustering, and running different linear regression models on the data to find which one performed the best.
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: #d1d5db;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  }
 
-Overall, our model using health indicators as well as regional and time data was the most effective in predicting life expectancy.
+  .project-type {
+    margin: 0 0 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #6b7280;
+  }
 
-**Technologies:** Python, Pandas, Scikit-learn, Matplotlib, Google Colab
+  .project-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    color: #111827;
+  }
 
-### Technical News Search Engine
+  .project-card p {
+    margin: 0 0 1rem;
+    line-height: 1.65;
+    color: #4b5563;
+  }
 
-Programming and Data Structure project that involved processing a set of 100 technology-related articles for analysis.
+  .project-tech {
+    margin-top: auto !important;
+    padding-top: 1rem;
+    font-size: 0.88rem !important;
+    font-weight: 600;
+    color: #374151 !important;
+  }
 
-Implemented Object Oriented Programming to read articles and process different article concepts. Added analytical features including article search, top trending topics over a certain time period, popularity of a specific topic over a period, and general database statistics/analysis. Built a menu interface over these features to allow for simple querying and analysis.
+  .project-links {
+    display: flex;
+    gap: 0.65rem;
+    margin-top: 0.9rem;
+  }
 
-**Technologies:** Java, Eclipse
+  .project-links a {
+    display: inline-block;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #111827;
+  }
 
-[LinkedIn] [Resume]
+  .project-links a:hover {
+    border-color: #111827;
+    background: #f9fafb;
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<h2>Featured Projects</h2>
+
+<div class="project-grid">
+
+  <article class="project-card">
+    <p class="project-type">Data Analytics · Machine Learning</p>
+    <h3>Global Health &amp; Life Expectancy Analysis</h3>
+    <p>
+      Analyzed World Bank health indicators to identify factors associated
+      with life expectancy. Cleaned and transformed large datasets, applied
+      K-Means clustering, and evaluated regression models to predict life expectancy.
+    </p>
+    <p class="project-tech">
+      Python · Pandas · Scikit-learn · Matplotlib
+    </p>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <p class="project-type">Programming · Data Structures</p>
+    <h3>Technical News Search Engine</h3>
+    <p>
+      Built a Java application to process and analyze 100 technology-related
+      articles. Implemented object-oriented programming and analytical features
+      for article search, trending topics, popularity analysis, and database statistics.
+    </p>
+    <p class="project-tech">
+      Java · Object-Oriented Programming · Data Structures
+    </p>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </article>
+
+</div>
