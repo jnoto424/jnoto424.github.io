@@ -1,4 +1,3 @@
-layout: default
 
 <style>
   .hero {
@@ -18,9 +17,9 @@ layout: default
 
   .hero h1 {
     margin: 0;
-    font-size: clamp(2.8rem, 7vw, 4.75rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     line-height: 1;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.04em;
     color: #111827;
   }
 
