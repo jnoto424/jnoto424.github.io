@@ -1,6 +1,6 @@
 # Joseph Noto
 
-Computer Science graduate student at Penn with a background in Management Information Systems. Focused on using data and technology to solve analytical problems and make a positive impact.
+I am a Computer Science graduate student at University of Pennsylvania with a Bachelor's in Management Information Systems from Penn State. My goals are to pair these degrees to take on complex projects and solve analytical problems. I want to be able to put these skills forward to drive positive results and leave a positive impact. Listed below are some projects I have worked on that have been engaging and useful!
 
 ## Skills
 
@@ -34,4 +34,4 @@ Implemented Object Oriented Programming to read articles and process different a
 
 **Technologies:** Java, Eclipse
 
-[GitHub] [LinkedIn] [Resume]
+[LinkedIn] [Resume]
