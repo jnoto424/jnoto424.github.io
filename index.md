@@ -107,8 +107,6 @@
   </div>
 </section>
 
-{{ content }}
-
 ## Skills
 
 Python · SQL · PySpark · Pandas · Scikit-learn · Java · AWS · Machine Learning
