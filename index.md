@@ -97,8 +97,7 @@
   <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
 
   <p class="hero-description">
-    I combine data analytics, computer science, and information systems
-    to solve business problems, provide valuable insight, and make a positive impact.
+    Hello! Welcome to my portfolio! I enjoy bringing together data, technology, and business to sole complex problems, uncover meaningful insights, and build solutions to make a difference. Listed below are a few academic projects, each with different types of programming and analytics. 
   </p>
 
   <div class="hero-links">
