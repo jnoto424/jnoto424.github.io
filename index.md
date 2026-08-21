@@ -257,8 +257,7 @@ Bachelor of Science in Management Information Systems
     SQL · MySQL · ERD
   </p>
   <div class="project-links">
-    <a href="/hospital-database">Read More</a>
-  </div>
+<a href="/hospital-database">Read More</a>  </div>
 </article>
 
 
