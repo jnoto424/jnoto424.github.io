@@ -225,7 +225,7 @@ Bachelor of Science in Management Information Systems
       Python · Pandas · Scikit-learn · Matplotlib
     </p>
     <div class="project-links">
-      <a href="/life-expectancy">Read More</a>  </div>
+      <a href="/life-expectancy">Read More</a>
 
     </div>
   </article>
@@ -242,7 +242,7 @@ Bachelor of Science in Management Information Systems
       Java · Object-Oriented Programming · Data Structures · Eclipse
     </p>
     <div class="project-links">
-      <a href="/technical-articles">Read More</a>  </div>
+      <a href="/technical-articles">Read More</a>
 
     </div>
   </article>
@@ -259,7 +259,8 @@ Bachelor of Science in Management Information Systems
     SQL · MySQL · ERD
   </p>
   <div class="project-links">
-<a href="/hospital-database">Read More</a>  </div>
+<a href="/hospital-database">Read More</a>
+    </div>
 </article>
 
 
