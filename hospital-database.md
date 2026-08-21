@@ -1,4 +1,3 @@
-
 # Relational Hospital Database
 
 ## Overview
@@ -7,21 +6,23 @@
 
 ## Database Design
 
-[Explanation of your ERD]
+Designed an Entity-Relationship Diagram (ERD) to model the relationships between entities within a sample hospital. The database was then translated into normalized relational tables with primary keys, foreign keys, and other relational constraints to maintain data integrity.
 
-![Hospital ERD](/assets/images/hospital-erd.png)
+![Hospital Database Entity-Relationship Diagram](/images/Screenshot 2026-08-21 164101.jpg)
+
+*Entity-Relationship Diagram for the relational hospital database.*
 
 ## Data Model
 
-[Tables, relationships, primary keys, foreign keys, normalization, etc.]
+[Describe the tables, relationships, primary keys, foreign keys, and normalization process.]
 
 ## SQL Analysis
 
-[Your aggregation queries and what they found]
+[Describe the aggregation queries performed across multiple tables and the insights generated from the analysis.]
 
 ## Technologies
 
-SQL · MySQL · ERD
+**SQL · MySQL · ERD**
 
 ## Key Takeaways
 
