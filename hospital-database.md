@@ -1,7 +1,3 @@
----
-layout: default
-title: Relational Hospital Database
----
 
 # Relational Hospital Database
 
