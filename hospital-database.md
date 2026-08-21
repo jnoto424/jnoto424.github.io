@@ -14,7 +14,7 @@ The ERD displayed below modeled all of the relationships between entities within
 
 ## Data Model
 
-[Describe the tables, relationships, primary keys, foreign keys, and normalization process.]
+As shown above, the hospital_record table is the central entity in the database. It tracks the specific patient, the performed procedure, which physician and nurse were involved, the date of the procedure, and the length of the patient's stay. A separate table stores the medications available to patients, along with prescriptions associated with each visit and the physician who prescribed each medication. Payment information is also recorded, including the invoice associated with each record and the method(s) of payment. Patient information and insurance details are also maintained in separate tables. The database also tracks the procedures available at the hospital and the rooms each one is performed in. Each physician's information is recorded along with their respective department, while nurse information is also logged.
 
 ## SQL Analysis
 
