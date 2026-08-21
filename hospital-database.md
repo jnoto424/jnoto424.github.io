@@ -8,7 +8,7 @@ For this project, I was tasked with designing a relational database from scratch
 
 The ERD displayed below modeled all of the relationships between entities within a sample hospital. The database was then translated into normalized relational tables with primary keys, foreign keys, and other relational constraints to maintain data integrity. This initial stage of the project was helpful in visualizing what relationships needed to be established before getting deep into the programming. 
 
-![Hospital Database Entity-Relationship Diagram](/images/Screenshot 2026-08-21 164101.jpg)
+![Hospital Database Entity-Relationship Diagram](/images/hospital-database.jpg)
 
 *Entity-Relationship Diagram for the relational hospital database.*
 
