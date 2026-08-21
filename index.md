@@ -245,19 +245,21 @@ Bachelor of Science in Management Information Systems
     </div>
   </article>
 
-  <article class="project-card">
-    <p class="project-type">Database Management · Database Design</p>
-    <h3>Relational Hospital Database</h3>
-    <p>
-     Built normalized tables with relational constraints to ensure data integrity and proper data loading for a sample hospital. Performed aggregation queries across multiple tables to analyze hospital operations and generate insights.
-    </p>
-    <p class="project-tech">
-      SQL · MySQL · ERD 
-    </p>
-    <div class="project-links">
-      <a href="#" target="_blank" rel="noopener noreferrer">Read More</a>
-    </div>
-  </article>
+<article class="project-card">
+  <p class="project-type">Database Management · Database Design</p>
+  <h3>Relational Hospital Database</h3>
+  <p>
+    Built normalized tables with relational constraints to ensure data integrity
+    and proper data loading for a sample hospital. Performed aggregation queries
+    across multiple tables to analyze hospital operations and generate insights.
+  </p>
+  <p class="project-tech">
+    SQL · MySQL · ERD
+  </p>
+  <div class="project-links">
+    <a href="/projects/hospital-database">Read More</a>
+  </div>
+</article>
 
 
 </div>
