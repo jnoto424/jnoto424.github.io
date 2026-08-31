@@ -44,13 +44,15 @@ The logging system was designed so that every part of the program would write to
 
 The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and tracking how a topic's popularity shifted over time.
 
-![Search](/images/search.png)
+![Search](/images/mssearch.png)
 
 *Searching for articles involving Microsoft in 2023 reveal an increase in articles covering the company between February and April 2023, with peak in March*
 
 ![Articles](/images/articlesperiod.png)
 
-*Searching for specific articles within that range allows users to see news driving the increase in Microsoft articles.
+*Searching for specific articles within that range allows users to see news driving the increase in Microsoft articles.*
+
+![Command](/images/command.png)
 
 *Typing in a direct command achieves the same result!*
 
