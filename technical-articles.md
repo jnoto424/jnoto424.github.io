@@ -40,7 +40,7 @@ The logging system was designed so that every part of the program would write to
 
 *Log file takes note of all actions user takes and identifies the source of any errors the user may encounter*
 
-## Results & Example Implementation
+## Results
 
 The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and tracking how a topic's popularity shifted over time.
 
