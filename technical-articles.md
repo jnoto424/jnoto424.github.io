@@ -30,11 +30,29 @@ In this project, I built a Java-based, in-memory search engine to process and an
 - Powers the core commands necessary for program functionality. Uses a Trie for autocomplete, a TreeMap for date-range queries, and a PriorityQueue to maintain the top 10 trending topics in the dataset.
 - Interactive and command mode interfaces both route through the same shared logic layer, so the commands behave the same regardless of which interface the user selects.
 
+![Main Menu](/images/mainmenu.png)
+
+*Program verifies that articles were successfully loaded and parsed before menu loads.*
+
 The logging system was designed so that every part of the program would write to the same log instance. The user-interface was designed so that both the interactive and command modes could call the same command logic without duplicating code
 
-## Results
+![Logger](/images/logger.png)
 
-The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and tracking how a topic's popularity shifted over time. 
+*Log file takes note of all actions user takes and identifies the source of any errors the user may encounter*
+
+## Results & Example Implementation
+
+The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and tracking how a topic's popularity shifted over time.
+
+![Search](/images/search.png)
+
+*Searching for articles involving Microsoft in 2023 reveal an increase in articles covering the company between February and April 2023, with peak in March*
+
+![Articles](/images/articlesperiod.png)
+
+*Searching for specific articles within that range allows users to see news driving the increase in Microsoft articles.
+
+*Typing in a direct command achieves the same result!*
 
 ## Technologies
 
