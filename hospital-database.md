@@ -2,7 +2,7 @@
 
 ## Overview
 
-For this project, I was tasked with designing a relational database from scratch for a sample hospital entirely within MySQL. I was provided with the hospital's information requirements and the relationships it needed to keep track of, including patient information, physician and nurse roles, and performed procedures. I first designed an Entity-Relationship Diagram (ERD) to define these relationships, and establish the database structure. Once the ERD was finalized and verified, I translated the design into relational tables using SQL. I then loaded sample CSV files into the database to validate the table structure and relationships. If an error occurred when loading any of the data, I troubleshooted the SQL, modified the table, and recreated whatever table was causing the error. After successfully loading the data, I performed analytical queries across multiple tables to extract insights and answer questions about the hospital.
+For this project, I was tasked with designing a relational database from scratch for a sample hospital entirely within MySQL. I was provided with the hospital's information requirements and the relationships it needed to keep track of, including patient information, physician and nurse roles, and performed procedures. I first designed an Entity-Relationship Diagram (ERD) to define these relationships, and establish the database structure. Once the ERD was finalized and verified, I translated the design into relational tables using SQL. I then loaded sample CSV files into the database to validate the table structure and relationships. If an error occurred when loading any of the data, I troubleshot the SQL, modified the table, and recreated whatever table was causing the error. After successfully loading the data, I performed analytical queries across multiple tables to extract insights and answer questions about the hospital.
 
 ## Database Design
 
@@ -30,7 +30,7 @@ Next, I performed several analytical queries against the relational hospital dat
 
 ![Payment Query](/images/paymentcheck.png)
 
-*This query joins invoice and payment records to compare each invoice's bill against the total payments received by the patient and is filtered where the two values are not equal. Finding these mismatches is very useful for auditing. SQL can be used not just to summarize data, bit also to identify discrepancies and prompt action.*
+*This query joins invoice and payment records to compare each invoice's bill against the total payments received by the patient and is filtered where the two values are not equal. Finding these mismatches is very useful for auditing. SQL can be used not just to summarize data, but also to identify discrepancies and prompt action.*
 
 ## Technologies
 
