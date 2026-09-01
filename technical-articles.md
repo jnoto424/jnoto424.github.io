@@ -1,3 +1,8 @@
+<style> .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; font-weight: 600; color: #7c3aed; text-decoration: none; } .back-link:hover { text-decoration: underline; } .project-page h2 { margin-top: 2.5rem; padding-left: 0.85rem; border-left: 4px solid #7c3aed; color: #111827; } .project-page img { border-radius: 10px; border: 1px solid #e5e7eb; box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06); } .project-page em { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: #6b7280; } .tech-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0 2rem; padding: 0; list-style: none; } .tech-pills li { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: #f5f3ff; color: #6d28d9; font-size: 0.9rem; font-weight: 600; } .key-takeaways { margin-top: 1rem; padding: 1.25rem 1.5rem; background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 8px; } </style>
+
+<a class="back-link" href="/">← Back to Portfolio</a>
+
+<div class="project-page">
 
 # Technical News Search Engine
 
