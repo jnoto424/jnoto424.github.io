@@ -1,6 +1,66 @@
-<style> .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; font-weight: 600; color: #7c3aed; text-decoration: none; } .back-link:hover { text-decoration: underline; } .project-page h2 { margin-top: 2.5rem; padding-left: 0.85rem; border-left: 4px solid #7c3aed; color: #111827; } .project-page img { border-radius: 10px; border: 1px solid #e5e7eb; box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06); } .project-page em { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: #6b7280; } .tech-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0 2rem; padding: 0; list-style: none; } .tech-pills li { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: #f5f3ff; color: #6d28d9; font-size: 0.9rem; font-weight: 600; } .key-takeaways { margin-top: 1rem; padding: 1.25rem 1.5rem; background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 8px; } </style>
+<style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7c3aed;
+    text-decoration: none;
+  }
 
-<a class="back-link" href="/">← Back to Portfolio</a>
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-page h2 {
+    margin-top: 2.5rem;
+    padding-left: 0.85rem;
+    border-left: 4px solid #7c3aed;
+    color: #111827;
+  }
+
+  .project-page img {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+  }
+
+  .project-page em {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tech-pills li {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: #f5f3ff;
+    color: #6d28d9;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .key-takeaways {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: #f5f3ff;
+    border-left: 4px solid #7c3aed;
+    border-radius: 8px;
+  }
+</style>
+
+<a class="back-link" href="/">&larr; Back to Portfolio</a>
 
 <div class="project-page">
 
@@ -63,10 +123,22 @@ The search engine loads and indexes articles from either file format, skipping a
 
 ## Technologies
 
-**Java · Object-Oriented Programming · Data Structures · Eclipse · Maven**
+<ul class="tech-pills">
+  <li>Java</li>
+  <li>Object-Oriented Programming</li>
+  <li>Data Structures</li>
+  <li>Eclipse</li>
+  <li>Maven</li>
+</ul>
 
 ## Key Takeaways
+
+<div class="key-takeaways">
 
 Working through this project offered an insightful look under the hood of what it actually takes to analyze data at scale. I came away with a much deeper appreciation for how much the right data structure matters for real-world performance. Many of the structures used here were pulled directly from earlier assignments throughout my Data Structures course, which made this project feel like a genuine culmination of everything I had learned up to that point.
 
 Beyond the technical implementation, this project gave me a clearer sense of everything that happens behind the scenes to make efficient analysis possible in the first place. To build this further, I'd be interested in testing the system against larger datasets spanning multiple years and/or topics to see how well the current architecture holds up under more varied inputs.
+
+</div>
+
+</div>
