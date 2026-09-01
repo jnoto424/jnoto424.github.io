@@ -92,7 +92,7 @@
   }
 </style>
 
-<section class="hero">
+<div class="hero">
   <p class="hero-eyebrow">Data Analytics · Business Intelligence · Information Systems</p>
 
   <h1>Joseph Noto</h1>
@@ -108,7 +108,7 @@
   <a class="primary" href="mailto:jnoto24@engineering.upenn.edu">Email</a>
   <a class="primary" href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 </div>
-</section>
+</div>
 
 <style>
   .skills-list {
