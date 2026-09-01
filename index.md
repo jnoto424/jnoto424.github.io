@@ -7,6 +7,23 @@
     border-radius: 0 0 16px 16px;
   }
 
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-headshot {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.12);
+    flex-shrink: 0;
+  }
+
   .hero-eyebrow {
     margin: 0 0 0.8rem;
     font-size: 0.88rem;
@@ -34,7 +51,7 @@
 
   .hero-description {
     max-width: 760px;
-    margin: 0 0 1.9rem;
+    margin: 1.5rem 0 1.9rem;
     font-size: 1.08rem;
     line-height: 1.75;
     color: #4b5563;
@@ -82,6 +99,17 @@
       padding: 2.25rem 0 2rem;
     }
 
+    .hero-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero-headshot {
+      width: 96px;
+      height: 96px;
+    }
+
     .hero h1 {
       font-size: 2.7rem;
     }
@@ -95,19 +123,23 @@
 <div class="hero">
   <p class="hero-eyebrow">Data Analytics · Business Intelligence · Information Systems</p>
 
-  <h1>Joseph Noto</h1>
-
-  <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
+  <div class="hero-top">
+    <img class="hero-headshot" src="/images/0909 MCF Headshots-9546.jpg" alt="Joseph Noto">
+    <div>
+      <h1>Joseph Noto</h1>
+      <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
+    </div>
+  </div>
 
   <p class="hero-description">
     Hello! Welcome to my portfolio! I enjoy bringing together data, technology, and business to solve complex problems, uncover meaningful insights, and build solutions to make a difference. Listed below are a few academic projects, each with different types of programming and analytics. 
   </p>
 
-<div class="hero-links">
-  <a class="primary" href="https://www.linkedin.com/in/joseph-noto-mis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a class="primary" href="mailto:jnoto24@engineering.upenn.edu">Email</a>
-  <a class="primary" href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-</div>
+  <div class="hero-links">
+    <a class="primary" href="https://www.linkedin.com/in/joseph-noto-mis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="primary" href="mailto:jnoto24@engineering.upenn.edu">Email</a>
+    <a class="primary" href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
 </div>
 
 <style>
