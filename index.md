@@ -1,9 +1,10 @@
-
 <style>
   .hero {
     padding: 3.75rem 0 3.25rem;
     border-bottom: 1px solid #e5e7eb;
     margin-bottom: 3rem;
+    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 55%);
+    border-radius: 0 0 16px 16px;
   }
 
   .hero-eyebrow {
@@ -12,7 +13,7 @@
     font-weight: 700;
     letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: #6b7280;
+    color: #2563eb;
   }
 
   .hero h1 {
@@ -58,20 +59,22 @@
   }
 
   .hero-links a:hover {
-    border-color: #111827;
-    background: #f9fafb;
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
     text-decoration: none;
   }
 
   .hero-links a.primary {
     color: #fff;
-    background: #111827;
-    border-color: #111827;
+    background: #2563eb;
+    border-color: #2563eb;
   }
 
   .hero-links a.primary:hover {
-    background: #374151;
-    border-color: #374151;
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    color: #fff;
   }
 
   @media (max-width: 600px) {
@@ -97,7 +100,7 @@
   <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
 
   <p class="hero-description">
-    Hello! Welcome to my portfolio! I enjoy bringing together data, technology, and business to sole complex problems, uncover meaningful insights, and build solutions to make a difference. Listed below are a few academic projects, each with different types of programming and analytics. 
+    Hello! Welcome to my portfolio! I enjoy bringing together data, technology, and business to solve complex problems, uncover meaningful insights, and build solutions to make a difference. Listed below are a few academic projects, each with different types of programming and analytics. 
   </p>
 
 <div class="hero-links">
@@ -107,9 +110,39 @@
 </div>
 </section>
 
+<style>
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .skills-list li {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+</style>
+
 ## Skills
 
-Python · SQL · PySpark · Pandas · Scikit-learn · Java · AWS · Machine Learning
+<ul class="skills-list">
+  <li>Python</li>
+  <li>SQL</li>
+  <li>PySpark</li>
+  <li>Pandas</li>
+  <li>Scikit-learn</li>
+  <li>Java</li>
+  <li>AWS</li>
+  <li>Machine Learning</li>
+</ul>
 
 ## Education
 
@@ -135,6 +168,7 @@ Bachelor of Science in Management Information Systems
     min-height: 310px;
     padding: 1.5rem;
     border: 1px solid #e5e7eb;
+    border-top: 4px solid #d1d5db;
     border-radius: 12px;
     background: #ffffff;
     box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
@@ -144,7 +178,19 @@ Bachelor of Science in Management Information Systems
   .project-card:hover {
     transform: translateY(-3px);
     border-color: #d1d5db;
-    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    box-shadow: 0 10px 26px rgba(37, 99, 235, 0.12);
+  }
+
+  .project-card.accent-blue {
+    border-top-color: #2563eb;
+  }
+
+  .project-card.accent-teal {
+    border-top-color: #0d9488;
+  }
+
+  .project-card.accent-purple {
+    border-top-color: #7c3aed;
   }
 
   .project-type {
@@ -153,7 +199,18 @@ Bachelor of Science in Management Information Systems
     font-weight: 700;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: #6b7280;
+  }
+
+  .accent-blue .project-type {
+    color: #2563eb;
+  }
+
+  .accent-teal .project-type {
+    color: #0d9488;
+  }
+
+  .accent-purple .project-type {
+    color: #7c3aed;
   }
 
   .project-card h3 {
@@ -194,10 +251,22 @@ Bachelor of Science in Management Information Systems
     color: #111827;
   }
 
-  .project-links a:hover {
-    border-color: #111827;
-    background: #f9fafb;
-    text-decoration: none;
+  .accent-blue .project-links a:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .accent-teal .project-links a:hover {
+    border-color: #0d9488;
+    background: #f0fdfa;
+    color: #0d9488;
+  }
+
+  .accent-purple .project-links a:hover {
+    border-color: #7c3aed;
+    background: #f5f3ff;
+    color: #7c3aed;
   }
 
   @media (max-width: 700px) {
@@ -211,7 +280,7 @@ Bachelor of Science in Management Information Systems
 
 <div class="project-grid">
 
-  <article class="project-card">
+  <article class="project-card accent-blue">
     <p class="project-type">Data Analytics · Machine Learning</p>
     <h3>Global Health &amp; Life Expectancy Analysis</h3>
     <p>
@@ -228,7 +297,7 @@ Bachelor of Science in Management Information Systems
     </div>
   </article>
 
-  <article class="project-card">
+  <article class="project-card accent-purple">
     <p class="project-type">Programming · Data Structures</p>
     <h3>Technical News Search Engine</h3>
     <p>
@@ -245,7 +314,7 @@ Bachelor of Science in Management Information Systems
     </div>
   </article>
 
-<article class="project-card">
+<article class="project-card accent-teal">
   <p class="project-type">Database Management · Database Design</p>
   <h3>Relational Hospital Database</h3>
   <p>
