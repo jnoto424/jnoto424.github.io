@@ -1,3 +1,83 @@
+<style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-page h2 {
+    margin-top: 2.5rem;
+    padding-left: 0.85rem;
+    border-left: 4px solid #2563eb;
+    color: #111827;
+  }
+
+  .project-page img {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+  }
+
+  .project-page em {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tech-pills li {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .cluster-list {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cluster-list li {
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.5rem;
+    background: #eff6ff;
+    border-left: 3px solid #2563eb;
+    border-radius: 6px;
+  }
+
+  .key-takeaways {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+  }
+</style>
+
+<a class="back-link" href="/">&larr; Back to Portfolio</a>
+
+<div class="project-page" markdown="1">
+
 # Global Health & Life Expectancy Analysis
 
 ## Overview
@@ -38,15 +118,19 @@ The following trends were noted during EDA:
 ![Outliers](/images/outliers.png)
 
 *Certain countries, like Cambodia, Rwanda, and Sierra Leone, suffered significant drops in life expectancy for a given decade as a result of civil wars & economic collapse*
+
 ## Clustering
 
 K-Means clustering was applied to group countries by similarity across health indicators. The right number of clusters was chosen by comparing results from the elbow method against silhouette scores across k=2 to k=10. We found that k=4 was the best balance for this clustering.
 
 The results mapped cleanly onto real-world groupings:
-- **Cluster 0** - mostly Eastern European Countries - avg. life expectancy: 69.2 years
-- **Cluster 1** - lower-income Sub-Saharan African & southeast Asian Countries - avg. life expectancy: 52.7 years
-- **Cluster 2** - high income, developed nations - avg. life expectancy: 75.8 years
-- **Cluster 3** - a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries - avg. life expectancy: 68.2 years
+
+<ul class="cluster-list">
+  <li><strong>Cluster 0</strong> — mostly Eastern European Countries — avg. life expectancy: 69.2 years</li>
+  <li><strong>Cluster 1</strong> — lower-income Sub-Saharan African &amp; southeast Asian Countries — avg. life expectancy: 52.7 years</li>
+  <li><strong>Cluster 2</strong> — high income, developed nations — avg. life expectancy: 75.8 years</li>
+  <li><strong>Cluster 3</strong> — a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries — avg. life expectancy: 68.2 years</li>
+</ul>
 
 ![Clusters](/images/clustermap.png)
 
@@ -82,8 +166,21 @@ The full model that combined health indicators with decade and region informatio
 
 ## Technologies
 
-**Python · Pandas · Scikit-learn · Matplotlib · Seaborn · Google Colab**
+<ul class="tech-pills">
+  <li>Python</li>
+  <li>Pandas</li>
+  <li>Scikit-learn</li>
+  <li>Matplotlib</li>
+  <li>Seaborn</li>
+  <li>Google Colab</li>
+</ul>
 
 ## Key Takeaways
 
+<div class="key-takeaways" markdown="1">
+
 Working through this project showed me how important the storytelling behind data analysis is compared to the modeling. The results of our machine learning models only became meaningful once we could tie them back to real historical events and trends. It reinforced how much groundwork goes into an effective model. Data cleaning, reshaping, and trimming down redundant information was just as important as the type of model we chose to run the data on. We found that health indicators alone left a meaningful amount of variance on the table, and that more information was needed to tell the story behind life expectancy trends. Working in a group also reinforced how useful it is to have multiple people sanity-checking feature selection and modeling decisions along the way, rather than working in a vacuum.
+
+</div>
+
+</div>
