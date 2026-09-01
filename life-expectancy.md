@@ -4,7 +4,7 @@
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #0d9488;
+    color: #2563eb;
     text-decoration: none;
   }
 
@@ -15,7 +15,7 @@
   .project-page h2 {
     margin-top: 2.5rem;
     padding-left: 0.85rem;
-    border-left: 4px solid #0d9488;
+    border-left: 4px solid #2563eb;
     color: #111827;
   }
 
@@ -45,17 +45,31 @@
     display: inline-block;
     padding: 0.4rem 0.85rem;
     border-radius: 999px;
-    background: #f0fdfa;
-    color: #0f766e;
+    background: #eff6ff;
+    color: #1d4ed8;
     font-size: 0.9rem;
     font-weight: 600;
+  }
+
+  .cluster-list {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cluster-list li {
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.5rem;
+    background: #eff6ff;
+    border-left: 3px solid #2563eb;
+    border-radius: 6px;
   }
 
   .key-takeaways {
     margin-top: 1rem;
     padding: 1.25rem 1.5rem;
-    background: #f0fdfa;
-    border-left: 4px solid #0d9488;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
     border-radius: 8px;
   }
 </style>
@@ -64,55 +78,108 @@
 
 <div class="project-page" markdown="1">
 
-# Relational Hospital Database
+# Global Health & Life Expectancy Analysis
 
 ## Overview
 
-For this project, I was tasked with designing a relational database from scratch for a sample hospital entirely within MySQL. I was provided with the hospital's information requirements and the relationships it needed to keep track of, including patient information, physician and nurse roles, and performed procedures. I first designed an Entity-Relationship Diagram (ERD) to define these relationships, and establish the database structure. Once the ERD was finalized and verified, I translated the design into relational tables using SQL. I then loaded sample CSV files into the database to validate the table structure and relationships. If an error occurred when loading any of the data, I troubleshot the SQL, modified the table, and recreated whatever table was causing the error. After successfully loading the data, I performed analytical queries across multiple tables to extract insights and answer questions about the hospital.
+I participated in a group project focused on developing a machine learning model to predict life expectancy using World Bank Health, Nutrition, and Population Statistics from Kaggle, along with a country-region mapping dataset. This project covered a full data pipeline: from cleaning and reshaping decades of country-level health data, exploring the story behind the numbers, clustering countries by region and health profile, and building regression models to predict life expectancy. Models built include standard Linear Regression, Ridge, Lasso, and Elastic Net. These models were compared to each other to see which one was most efficient for making predictions. Beyond the modeling aspect, the real focus was using the data to display how health and geography shape how long people live across the globe.
 
-## Database Design
+## Project Goals
 
-The ERD displayed below modeled all of the relationships between entities within a sample hospital. The database was then translated into normalized relational tables with primary keys, foreign keys, and other relational constraints to maintain data integrity. This initial stage of the project was helpful in visualizing what relationships needed to be established before getting deep into the programming. 
+- Identify which health indicators are most associated with life expectancy
+- Clean and reshape the World Bank dataset into a usable dataframe
+- Group countries based on similarities in health characteristics
+- Build regression models to predict future life expectancy
+- Evaluate model performance using multiple metrics
 
-![Hospital Database Entity-Relationship Diagram](/images/hospital-database.jpg)
+## Data Preparation
 
-*Entity-Relationship Diagram for the relational hospital database.*
+The raw World Bank Health dataset came in a wide format with one column for each year. So, the first step was to melt it into a long format with one row per country, health indicator, and year. From there, missing values were interpolated linearly within each country-indicator group, and indicators with more than 50% missing data were dropped entirely rather than trying to force them into the model. To reduce noise and make trends easier for us to read, yearly data was aggregated into averages by decade. 
 
-## Data Model
+With over 100 different health indicators dispersed throughout this dataset, redundant and highly-correlated features also had to be trimmed down. Indicator pairs with a correlation above 0.80 were flagged, and only the feature more strongly correlated with life expectancy was kept from each pair. The dataset also had breakdowns of various health indicators for males and females. These gender-specific indicators were also excluded to keep the focus on total population trends. The final set of indicators was broken down into categories for education, healthcare access, infectious disease, etc. to keep things interpretable rather than just throwing every remaining column at the model.
 
-As shown above, the hospital_record table is the central entity in the database. It tracks the specific patient, the performed procedure, which physician and nurse were involved, the date of the procedure, and the length of the patient's stay. A separate table stores the medications available to patients, along with prescriptions associated with each visit and the physician who prescribed each medication. Payment information is also recorded, including the invoice associated with each record and the method(s) of payment. Patient information and insurance details are also maintained in separate tables. The database also tracks the procedures available at the hospital and the rooms each one is performed in. Each physician's information is recorded along with their respective department, while nurse information is also logged.
+![Adjusted Table](/images/healthtable.png)
 
-## SQL Analysis
+*Above is a screenshot of the first five rows of our cleaned and reshaped dataset*
 
-Next, I performed several analytical queries against the relational hospital database covering patients, physicians, procedures, billing, and insurance. Listed below are a few examples that highlight specific operational and financial questions that would be beneficial for analyzing the hospital's processes.
+## Exploratory Analysis
 
-![Physician Query](/images/physicianrank.png)
+The following trends were noted during EDA:
 
-*Using a window function, this query identifies the physician with the highest amount of procedures within each hospital department. Partitioning by department allows for a more fair comparison of performance based on specialty. This type of query could be useful for identifying top performers for staffing decisions and balancing workloads.*
+- Global average life expectancy climbed steadily across decades, and the variance between countries decreased over time.
+- Individual country trajectories revealed real historical events hiding in the data. For example, countries like Cambodia, Rwanda, and Mali all have significant drops in life expectancy due to war, genocide, economic collapse, and famine.
+- Correlation analysis showed other life-expectancy and survival related metrics moving in the same direction, while mortality-related indicators moved inversely.
+- Outlier detection using IQR bounds helped confirm which countries were true statistical outliers versus just low performers, which helped shape how we interpreted the clustering results later on.
 
-![Invoice Query](/images/invoicequery.png)
+![LE Growth](/images/legrowth.png)
 
-*This query joins information from insurance, patients, hospital_record, and invoices to calculate the total billed revenue and average invoice amount generated by each insurance provider's patient base. We also see the number of distinct patients per provider and the range of plan types associated with each. Analyzing these insurance metrics could be useful in contact negotiations and establishing provider partnerships.*
+*Overall, life expectancy globally increased decade by decade, indicating that more countries were developing to provide better outcomes for their people*
 
-![Payment Query](/images/paymentcheck.png)
+![Outliers](/images/outliers.png)
 
-*This query joins invoice and payment records to compare each invoice's bill against the total payments received by the patient and is filtered where the two values are not equal. Finding these mismatches is very useful for auditing. SQL can be used not just to summarize data, but also to identify discrepancies and prompt action.*
+*Certain countries, like Cambodia, Rwanda, and Sierra Leone, suffered significant drops in life expectancy for a given decade as a result of civil wars & economic collapse*
+
+## Clustering
+
+K-Means clustering was applied to group countries by similarity across health indicators. The right number of clusters was chosen by comparing results from the elbow method against silhouette scores across k=2 to k=10. We found that k=4 was the best balance for this clustering.
+
+The results mapped cleanly onto real-world groupings:
+
+<ul class="cluster-list">
+  <li><strong>Cluster 0</strong> — mostly Eastern European Countries — avg. life expectancy: 69.2 years</li>
+  <li><strong>Cluster 1</strong> — lower-income Sub-Saharan African &amp; southeast Asian Countries — avg. life expectancy: 52.7 years</li>
+  <li><strong>Cluster 2</strong> — high income, developed nations — avg. life expectancy: 75.8 years</li>
+  <li><strong>Cluster 3</strong> — a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries — avg. life expectancy: 68.2 years</li>
+</ul>
+
+![Clusters](/images/clustermap.png)
+
+*Map displays by color the countries in the same clusters as a result of k-Means Clustering*
+
+## Predictive Modeling
+
+Evaluated several regression approaches to predict total life expectancy, all trained on a proper train/test split:
+
+- Linear Regression (health + decade + region) - the full model, including categorical decade and region indicators alongside health features
+- Linear Regression (health only) - a stripped down version using only health indicators, to isolate their predictive value on their own.
+- Ridge, Lasso, Elastic Net - regularized versions of the health-only model, each tuned with a 5-fold cross validation.
+
+## Visualizations
+
+![Health Coefs](/images/healthcoefs.png)
+
+*Top Health Coefficients*
+
+![Results](/images/resultsgraph.png)
+
+*Actual vs Predicted Life Expectancy for the health-only regression model*
+
+## Model Evaluation
+
+Evaluated model performance using MAE, RMSE, R^2, plus 5-fold cross validated RMSE for the regularized models. Final Results:
+
+![Model Comp](/images/models.png)
+
+## Results
+
+The full model that combined health indicators with decade and region information outperformed every health-only model, explaining about 87% of the variance in life expectancy with an average error of roughly 3.2 years. That gap between the full and health-only models showed that health indicators alone did not tell the full story. Adding time and geography allowed the model to capture real trends like medical progress over time and regional disparities in infrastructure and policy. Among the health-only models, Lasso edged out Ridge and Elastic Net likely due to its zeroing out of irrelevant coefficients and keeping the model lean.
 
 ## Technologies
 
 <ul class="tech-pills">
-  <li>SQL</li>
-  <li>MySQL</li>
-  <li>ERD</li>
+  <li>Python</li>
+  <li>Pandas</li>
+  <li>Scikit-learn</li>
+  <li>Matplotlib</li>
+  <li>Seaborn</li>
+  <li>Google Colab</li>
 </ul>
 
 ## Key Takeaways
 
 <div class="key-takeaways" markdown="1">
 
-Working through this project reinforced just how much analytical power SQL offers beyond basic data storage and retrieval. It is capable of writing complex queries, whether it's through window functions or subqueries, that unlocks insightful analysis. Translating an ERD into functioning tables and queries gave me a deep appreciation for how schema design directly shapes what kind of analysis is even possible.
-
-This type of problem-solving is what originally motivated me to become a Learning Assistant for Penn State's introductory database course for 3 years. Supporting students through similar projects sharpened my own understanding of relational design and query logic, and reinforced how crucial organized data is for producing meaningful analysis.
+Working through this project showed me how important the storytelling behind data analysis is compared to the modeling. The results of our machine learning models only became meaningful once we could tie them back to real historical events and trends. It reinforced how much groundwork goes into an effective model. Data cleaning, reshaping, and trimming down redundant information was just as important as the type of model we chose to run the data on. We found that health indicators alone left a meaningful amount of variance on the table, and that more information was needed to tell the story behind life expectancy trends. Working in a group also reinforced how useful it is to have multiple people sanity-checking feature selection and modeling decisions along the way, rather than working in a vacuum.
 
 </div>
 
