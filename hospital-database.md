@@ -1,3 +1,69 @@
+<style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0d9488;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-page h2 {
+    margin-top: 2.5rem;
+    padding-left: 0.85rem;
+    border-left: 4px solid #0d9488;
+    color: #111827;
+  }
+
+  .project-page img {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+  }
+
+  .project-page em {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tech-pills li {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: #f0fdfa;
+    color: #0f766e;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .key-takeaways {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: #f0fdfa;
+    border-left: 4px solid #0d9488;
+    border-radius: 8px;
+  }
+</style>
+
+<a class="back-link" href="/">&larr; Back to Portfolio</a>
+
+<div class="project-page" markdown="1">
+
 # Relational Hospital Database
 
 ## Overview
@@ -34,10 +100,20 @@ Next, I performed several analytical queries against the relational hospital dat
 
 ## Technologies
 
-**SQL · MySQL · ERD**
+<ul class="tech-pills">
+  <li>SQL</li>
+  <li>MySQL</li>
+  <li>ERD</li>
+</ul>
 
 ## Key Takeaways
+
+<div class="key-takeaways" markdown="1">
 
 Working through this project reinforced just how much analytical power SQL offers beyond basic data storage and retrieval. It is capable of writing complex queries, whether it's through window functions or subqueries, that unlocks insightful analysis. Translating an ERD into functioning tables and queries gave me a deep appreciation for how schema design directly shapes what kind of analysis is even possible.
 
 This type of problem-solving is what originally motivated me to become a Learning Assistant for Penn State's introductory database course for 3 years. Supporting students through similar projects sharpened my own understanding of relational design and query logic, and reinforced how crucial organized data is for producing meaningful analysis.
+
+</div>
+
+</div>
