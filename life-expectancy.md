@@ -45,8 +45,8 @@ K-Means clustering was applied to group countries by similarity across health in
 The results mapped cleanly onto real-world groupings:
 - **Cluster 0** - mostly Eastern European Countries - avg. life expectancy: 69.2 years
 - **Cluster 1** - lower-income Sub-Saharan African & southeast Asian Countries - avg. life expectancy: 52.7 years
-- **Cluster 0** - high income, developed nations - avg. life expectancy: 75.8 years
-- **Cluster 0** - a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries - avg. life expectancy: 68.2 years
+- **Cluster 2** - high income, developed nations - avg. life expectancy: 75.8 years
+- **Cluster 3** - a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries - avg. life expectancy: 68.2 years
 
 ![Clusters](/images/clustermap.png)
 
@@ -78,7 +78,7 @@ Evaluated model performance using MAE, RMSE, R^2, plus 5-fold cross validated RM
 
 ## Results
 
-The full model that combined health indicators with decade and region information outperformed every health-only model, explaining about 87% of the variance in life expectancy with an average error of roughly 3.2 years. That gap between the full and health-only models showed that health indicators alone did not tell the full story. Adding time and geography allowed the model to capture real trends like medical progress over time and regional disparities in infrastructure and policy. Among the health-only models, Lasso edged out Ridge and Elastic Net likely due to it's zeroing out of irrelevant coefficients and keeping the model lean.
+The full model that combined health indicators with decade and region information outperformed every health-only model, explaining about 87% of the variance in life expectancy with an average error of roughly 3.2 years. That gap between the full and health-only models showed that health indicators alone did not tell the full story. Adding time and geography allowed the model to capture real trends like medical progress over time and regional disparities in infrastructure and policy. Among the health-only models, Lasso edged out Ridge and Elastic Net likely due to its zeroing out of irrelevant coefficients and keeping the model lean.
 
 ## Technologies
 
