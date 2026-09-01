@@ -101,10 +101,9 @@
   </p>
 
   <div class="hero-links">
-  <a class="primary" href="https://github.com/jnoto424" target="_blank" rel="noopener noreferrer">GitHub</a>
   <a href="https://www.linkedin.com/in/joseph-noto-mis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   <a href="mailto:jnoto24@engineering.upenn.edu">Email</a>
-  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  <a href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 </div>
 </section>
 
