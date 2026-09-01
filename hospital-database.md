@@ -110,7 +110,7 @@ Next, I performed several analytical queries against the relational hospital dat
 
 <div class="key-takeaways" markdown="1">
 
-Working through this project reinforced just how much analytical power SQL offers beyond basic data storage and retrieval. It is capable of writing complex queries, whether it's through window functions or subqueries, that unlocks insightful analysis. Translating an ERD into functioning tables and queries gave me a deep appreciation for how schema design directly shapes what kind of analysis is even possible.
+Working through this project reinforced how much analytical power SQL offers beyond basic data storage and retrieval. It is capable of writing complex queries, whether it's through window functions or subqueries, that unlocks insightful analysis. Translating an ERD into functioning tables and queries gave me a deep appreciation for how schema design directly shapes what kind of analysis is even possible.
 
 This type of problem-solving is what originally motivated me to become a Learning Assistant for Penn State's introductory database course for 3 years. Supporting students through similar projects sharpened my own understanding of relational design and query logic, and reinforced how crucial organized data is for producing meaningful analysis.
 
