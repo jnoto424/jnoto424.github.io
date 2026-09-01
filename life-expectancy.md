@@ -18,6 +18,10 @@ The raw World Bank Health dataset came in a wide format with one column for each
 
 With over 100 different health indicators dispersed throughout this dataset, redundant and highly-correlated features also had to be trimmed down. Indicator pairs with a correlation above 0.80 were flagged, and only the feature more strongly correlated with life expectancy was kept from each pair. The dataset also had breakdowns of various health indicators for males and females. These gender-specific indicators were also excluded to keep the focus on total population trends. The final set of indicators was broken down into categories for education, healthcare access, infectious disease, etc. to keep things interpretable rather than just throwing every remaining column at the model.
 
+![Adjusted Table](/images/healthtable.png)
+
+*Above is a screenshot of the first five rows of our cleaned and reshaped dataset*
+
 ## Exploratory Analysis
 
 The following trends were noted during EDA:
@@ -27,15 +31,26 @@ The following trends were noted during EDA:
 - Correlation analysis showed other life-expectancy and survival related metrics moving in the same direction, while mortality-related indicators moved inversely.
 - Outlier detection using IQR bounds helped confirm which countries were true statistical outliers versus just low performers, which helped shape how we interpreted the clustering results later on.
 
+![LE Growth](/images/legrowth.png)
+
+*Overall, life expectancy globally increased decade by decade, indicating that more countries were developing to provide better outcomes for their people*
+
+![Outliers](/images/outliers.png)
+
+*Certain countries, like Cambodia, Rwanda, and Sierra Leone, suffered significant drops in life expectancy for a given decade as a result of civil wars & economic collapse*
 ## Clustering
 
 K-Means clustering was applied to group countries by similarity across health indicators. The right number of clusters was chosen by comparing results from the elbow method against silhouette scores across k=2 to k=10. We found that k=4 was the best balance for this clustering.
 
 The results mapped cleanly onto real-world groupings:
-- **Cluster 0** - mostly Eastern European Countrties - avg. life expectancy: 69.2 years
+- **Cluster 0** - mostly Eastern European Countries - avg. life expectancy: 69.2 years
 - **Cluster 1** - lower-income Sub-Saharan African & southeast Asian Countries - avg. life expectancy: 52.7 years
 - **Cluster 0** - high income, developed nations - avg. life expectancy: 75.8 years
 - **Cluster 0** - a more diverse mix of Latin American, Southeast Asian, Middle Eastern, and Caribbean Countries - avg. life expectancy: 68.2 years
+
+![Clusters](/images/clustermap.png)
+
+*Map displays by color the countries in the same clusters as a result of k-Means Clustering*
 
 ## Predictive Modeling
 
@@ -45,19 +60,25 @@ Evaluated several regression approaches to predict total life expectancy, all tr
 - Linear Regression (health only) - a stripped down version using only health indicators, to isolate their predictive value on their own.
 - Ridge, Lasso, Elastic Net - regularized versions of the health-only model, each tuned with a 5-fold cross validation.
 
+## Visualizations
+
+![Health Coefs](/images/healthcoefs.png)
+
+*Top Health Coefficients*
+
+![Results](/images/resultsgraph.png)
+
+*Actual vs Predicted Life Expectancy for the health-only regression model*
+
 ## Model Evaluation
 
 Evaluated model performance using MAE, RMSE, R^2, plus 5-fold cross validated RMSE for the regularized models. Final Results:
 
-[Insert your final model results here.]
+![Model Comp](/images/models.png)
 
 ## Results
 
-The full model that combined health indicators with decade and region information outperformed every health-only model, explaining about 87% of he variance in life expectancy with an average error of roughly 4 years. That gap between the full and health-only models showed that health indicators alone did not tell the full story. Adding time and geography allowed the model to capture real trends like medical progress over time and regional disparities in infrastructure and policy. Among the health-only models, Lasso edged out Ridge and Elastic Net likely due to it's zeroing out of irrelevant coefficients and keeping the model lean.
-
-## Visualizations
-
-[Insert your final model results here.]
+The full model that combined health indicators with decade and region information outperformed every health-only model, explaining about 87% of the variance in life expectancy with an average error of roughly 3.2 years. That gap between the full and health-only models showed that health indicators alone did not tell the full story. Adding time and geography allowed the model to capture real trends like medical progress over time and regional disparities in infrastructure and policy. Among the health-only models, Lasso edged out Ridge and Elastic Net likely due to it's zeroing out of irrelevant coefficients and keeping the model lean.
 
 ## Technologies
 
