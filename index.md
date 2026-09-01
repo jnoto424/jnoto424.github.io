@@ -100,10 +100,10 @@
     Hello! Welcome to my portfolio! I enjoy bringing together data, technology, and business to sole complex problems, uncover meaningful insights, and build solutions to make a difference. Listed below are a few academic projects, each with different types of programming and analytics. 
   </p>
 
-  <div class="hero-links">
-  <a href="https://www.linkedin.com/in/joseph-noto-mis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="mailto:jnoto24@engineering.upenn.edu">Email</a>
-  <a href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+<div class="hero-links">
+  <a class="primary" href="https://www.linkedin.com/in/joseph-noto-mis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a class="primary" href="mailto:jnoto24@engineering.upenn.edu">Email</a>
+  <a class="primary" href="/JnotoResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 </div>
 </section>
 
