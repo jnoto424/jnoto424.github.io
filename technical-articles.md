@@ -16,7 +16,7 @@ In this project, I built a Java-based, in-memory search engine to process and an
 ## Functionality
 
 - Keyword search across articles using an inverted index
-- Autocomplete suggestions using a Trie application
+- Autocomplete suggestions using a Trie implementation
 - Trending topic analysis for the top 10 words used in a given month
 - Topic popularity trends across a specified date range
 - Article browsing by date range, sorted chronologically
@@ -34,7 +34,7 @@ In this project, I built a Java-based, in-memory search engine to process and an
 
 *Program verifies that articles were successfully loaded and parsed before menu loads.*
 
-The logging system was designed so that every part of the program would write to the same log instance. The user-interface was designed so that both the interactive and command modes could call the same command logic without duplicating code
+The logging system was designed so that every part of the program would write to the same log instance. The user-interface was designed so that both the interactive and command modes could call the same command logic without duplicating code.
 
 ![Logger](/images/logger.png)
 
@@ -42,7 +42,7 @@ The logging system was designed so that every part of the program would write to
 
 ## Results
 
-The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and tracking how a topic's popularity shifted over time.
+The search engine loads and indexes articles from either file format, skipping and logging malformed records instead of crashing. Beyond retrieving the data, the topics and trends commands turn the article set into relevant analysis, as the user is able to uncover which subjects dominate technical news coverage in a given month and track how a topic's popularity shifted over time.
 
 ![Search](/images/mssearch.png)
 
@@ -62,6 +62,6 @@ The search engine loads and indexes articles from either file format, skipping a
 
 ## Key Takeaways
 
-Working through this project offered an insightful look under the hood of what it actually takes to analyze data at scale. I came away with a much deeper appreciation for how much the right data structure matters for real-world performance. Many of the structures used here were pulled directly from earlier assignments throughout my Data Structures course, which made this project feel like genuine culmination of everything I had learned up to that point.
+Working through this project offered an insightful look under the hood of what it actually takes to analyze data at scale. I came away with a much deeper appreciation for how much the right data structure matters for real-world performance. Many of the structures used here were pulled directly from earlier assignments throughout my Data Structures course, which made this project feel like a genuine culmination of everything I had learned up to that point.
 
 Beyond the technical implementation, this project gave me a clearer sense of everything that happens behind the scenes to make efficient analysis possible in the first place. To build this further, I'd be interested in testing the system against larger datasets spanning multiple years and/or topics to see how well the current architecture holds up under more varied inputs.
