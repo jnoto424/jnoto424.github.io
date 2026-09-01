@@ -62,6 +62,8 @@
 
 <a class="back-link" href="/">&larr; Back to Portfolio</a>
 
+<div class="project-page" markdown="1">
+
 # Technical News Search Engine
 
 ## Overview
@@ -131,7 +133,7 @@ The search engine loads and indexes articles from either file format, skipping a
 
 ## Key Takeaways
 
-<div class="key-takeaways">
+<div class="key-takeaways" markdown="1">
 
 Working through this project offered an insightful look under the hood of what it actually takes to analyze data at scale. I came away with a much deeper appreciation for how much the right data structure matters for real-world performance. Many of the structures used here were pulled directly from earlier assignments throughout my Data Structures course, which made this project feel like a genuine culmination of everything I had learned up to that point.
 
