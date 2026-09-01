@@ -62,8 +62,6 @@
 
 <a class="back-link" href="/">&larr; Back to Portfolio</a>
 
-<div class="project-page">
-
 # Technical News Search Engine
 
 ## Overview
