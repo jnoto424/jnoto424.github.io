@@ -76,6 +76,33 @@
     border: 1px solid #f3f4f6;
   }
 
+  .metric-callout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .metric-callout div {
+    flex: 1;
+    min-width: 160px;
+    padding: 0.9rem 1rem;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+  }
+
+  .metric-callout strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #92400e;
+  }
+
+  .metric-callout span {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
   .key-takeaways {
     margin-top: 1rem;
     padding: 1.25rem 1.5rem;
@@ -93,44 +120,49 @@
 
 ## Overview
 
-As part of a semester-long consulting engagement, our team partnered with a small, locally-owned tutoring service to review their current business processes and propose actionable improvements. Working directly with the client's Director of Operations, we conducted stakeholder interviews, mapped out existing workflows using EPC (Event-Driven Process Chain) diagrams, and identified three core processes with clear room for improvement: the tutor application process, individual tutoring session scheduling, and student feedback collection. We then designed improved versions of each process, evaluated third-party software solutions to support them, and delivered a full cost-benefit analysis to help the client make an informed implementation decision.
+As part of a semester-long consulting engagement, I participated in a group project that partnered with a small, locally-owned tutoring service to analyze their current business processes and identify opportunities for improvement. We worked directly with the client's Director of Operations to conduct stakeholder interviews, map existing workflows using Event-Driven Process Chain (EPC) diagrams, and diagnose three core processes with measurable inefficiencies. We focused on the tutor application process, tutoring session scheduling, and student feedback collection. From there, we evaluated third-party solutions by conducting a cost-benefit analysis to support the client's final decision.
 
 ## Project Goals
 
-- Understand the client's current business processes through direct stakeholder engagement
-- Identify inefficiencies and growth-limiting gaps in existing workflows
-- Design improved, streamlined versions of each process
-- Evaluate and recommend third-party software solutions to support each improvement
-- Deliver a cost-benefit analysis to support the client's decision-making
-- Present findings and recommendations directly to the client for feedback
+- Diagnose inefficiencies in current business processes through structured stakeholder analysis
+- Translate qualitative interview findings into visual process maps for objective comparison
+- Evaluate competing software solutions using a consistent cost framework
+- Quantify the cost and projected impact of each proposed improvement
+- Deliver findings that support, rather than dictate, the client's final decision
 
 ## Current State Analysis
 
-Our team began by meeting with the client to understand their business model, current systems, and organizational structure. From there, we mapped out the existing versions of three key processes using EPC diagrams, which allowed us to visually identify bottlenecks and inefficiencies before proposing any changes.
+Analysis began with  interviews with the client's leadership to understand their business model, systems, and sources of frustration within the organization. We translated these qualitative findings into EPC diagrams for three key processes, since visualizing each of these processes let us identify exactly where delays occurred.
 
 **Tutor Application Process**
-The existing process required prospective tutors to navigate an unclear path through the website's "Contact" tab just to find the job application, and the application itself only collected basic contact information — with no way to capture relevant qualifications like GPA or prior tutoring experience.
+Mapping the process showed that applicants had to navigate through an unrelated "Contact" tab just to find the job application link, and the form itself captured only contact information and had nothing  to collect any other useful data like GPA or prior tutoring experience. There was no structured way to screen or compare applicants.
 
 **Individual Tutoring Session Scheduling**
-Scheduling a session required students to manually email a scheduling inbox, then wait for a staff response confirming availability before coordinating directly with a tutor over email. This back-and-forth process introduced delays that could stretch over multiple days.
+Process mapping revealed a that scheduling relied on manual emails between a tutor and student before a session could be confirmed. We flagged this as the primary source of scheduling delays, since the process had no defined turnaround time and relied entirely on staff availability to relay information back and forth.
 
 **Feedback Collection**
-There was no structured feedback mechanism at all — the website simply directed users to call or email general contact information, meaning feedback was easily lost among other routine communications.
+There was no structured intake process, as feedback arrived as unstructured emails or calls. The client had no way to aggregate, quantify, or trend feedback over time.
 
 ## Proposed Improvements
 
 **Tutor Application Process**
-We proposed adding a dedicated "Apply" section to the main site, routing applicants to an external application platform. This would let the client display detailed job postings, auto-fill applications from an uploaded resume, and flag incomplete or fraudulent submissions — reducing friction for qualified applicants while improving the quality of information collected.
+*We proposed routing applicants to a dedicated third-party application platform that was capable of collecting structured, comparable data on every application and automatically flagging any incomplete submissions.*
 
 **Individual Tutoring Session Scheduling**
-We proposed integrating a live scheduling tool directly into the website, allowing students to view real-time tutor availability, select a time slot, and complete payment immediately — eliminating the manual email back-and-forth entirely. Tutor calendars would sync automatically with common platforms like Google Calendar, Outlook, and Slack.
+*We proposed replacing the manual email exchange with a live scheduling integration, which would allow students to view real-time tutor availability and confirm a session in a single step.*
 
 **Feedback Collection**
-We proposed a dedicated feedback form embedded directly into the site, capturing structured ratings and comments rather than relying on unstructured emails or calls. We also recommended an optional field inviting suggestions for additional course offerings, giving the client a lightweight way to gauge demand for future service expansion.
+*We proposed a structured feedback form capturing satisfaction ratings, service type, and open comments to give the client a readable dataset rather than unstructured reviews.*
 
 ## Cost-Benefit Analysis
 
-For the two process improvements requiring paid third-party software, we built out a full cost-benefit comparison to help the client weigh investment against expected impact.
+To support an objective comparison rather than a subjective preference, we built a structured cost breakdown for each proposed software solution, evaluating both one-time and recurring costs side by side.
+
+<div class="metric-callout">
+  <div><strong>~$15,000</strong><span>Est. Year 1 cost — application platform</span></div>
+  <div><strong>~$2,150</strong><span>Est. Year 1 cost — scheduling platform</span></div>
+  <div><strong>3</strong><span>Core processes analyzed</span></div>
+</div>
 
 **Tutor Application Platform**
 
@@ -143,7 +175,7 @@ For the two process improvements requiring paid third-party software, we built o
 <tr><td>Maintenance</td><td>Annual support</td><td>$1,000/year</td></tr>
 </table>
 
-This option offered strong security features (dual authentication, encrypted data transfer), centralized applicant data management, and scalability as the client's tutor roster grows — but came with a meaningfully higher price tag, both up front and in ongoing subscription costs.
+This option scored highest on security and scalability due to its use of dual authentication, encrypted data transfer, and centralized applicant records. But, analysis showed a substantially higher total cost of ownership, driven primarily by its recurring annual subscription rather than one-time implementation costs.
 
 **Scheduling Platform**
 
@@ -155,17 +187,17 @@ This option offered strong security features (dual authentication, encrypted dat
 <tr><td>Maintenance</td><td>Annual support</td><td>$100/year</td></tr>
 </table>
 
-This option was significantly more affordable and simpler to integrate with the client's existing website platform, with strong ease-of-use for both tutors and students, though it came with a shorter adjustment period as staff transitioned to the new workflow.
+By contrast, this option's cost scaled with tutor headcount rather than a flat enterprise fee, making it substantially cheaper at the client's current size and lower-risk to pilot before a larger commitment.
 
-Ultimately, we presented both options with their respective trade-offs rather than a single blanket recommendation, since the right choice depended on the client's budget priorities and appetite for a larger infrastructure investment versus a lighter-weight improvement.
+Rather than issuing a single blanket recommendation, we presented both options with their quantified trade-offs, since the right choice ultimately depended on the client's budget constraints and risk tolerance.
 
 ## Client Feedback
 
-We presented our findings and proposed solutions directly to the client in a final meeting. Feedback was largely positive: the client's leadership team was enthusiastic about the security and centralization benefits of the tutor application platform, though they flagged concerns about its ongoing cost and maintenance complexity. The scheduling platform recommendation was met with strong approval, particularly for its ease of use and reduced administrative burden — tutors and students alike responded well to the idea of self-service scheduling. Some feedback suggested further personalization, such as the ability to filter or select tutors by expertise, which we noted as a potential area for future iteration beyond the scope of this engagement.
+We presented our analysis and recommendations directly to the client in a final meeting, incorporating feedback from our meetings throughout the engagement. The client's leadership had a positive response to the application platform's security and scalability, through they flagged the cost as a longer-term consideration rather than an immediate priority. The scheduling platform was met with a strong approval given its lower cot and ease of use. Both tutors and students responded well to the proposal of automated, self-service scheduling. Feedback also brought up a potential future addition for filtering tutors by expertise or rating, which was noted for a future implementation.
 
 ## Results
 
-The engagement delivered three fully mapped process improvements, each paired with a concrete implementation path and a transparent cost breakdown — giving the client the information needed to move forward at whatever pace fit their budget and growth plans. The scheduling and feedback improvements, in particular, offered strong impact relative to their cost, while the tutor application platform was framed as a larger, longer-term investment tied to the client's growth trajectory.
+Our engagement delivered three fully diagnosed process gaps, each with a quantified improvement path. By grounding every proposal in a structured cost comparison, we gave the client a clear way to prioritize: the scheduling and feedback improvements offered strong impact at low cost and were positioned as near-term wins, while the tutor application platform was a larger investment to revisit as the client's staffing needs grow.
 
 ## Technologies
 
@@ -181,7 +213,7 @@ The engagement delivered three fully mapped process improvements, each paired wi
 
 <div class="key-takeaways" markdown="1">
 
-This project was a genuine introduction to what client-facing consulting work actually looks like — translating a stakeholder's pain points into a structured process map, and then a structured map into a concrete, costed recommendation. It reinforced that a good recommendation isn't just "the better option" in the abstract; it has to account for the client's actual budget, priorities, and appetite for change. Presenting two viable paths rather than a single verdict, and being transparent about the trade-offs of each, felt like a more honest and more useful way to support a real business decision. Working through this as a team also underscored how much a good client relationship shapes the quality of the final recommendation — the improvements we proposed were only as strong as our understanding of the client's actual day-to-day operations, which came directly from the time we invested in stakeholder conversations.
+Working through this project showed me that proper consulting and analysis requires going beyond identifying the problem, but also necessitates comparable solutions so the client can make an informed decision. Translating loosely described pain points into EPC diagrams was a useful way to help us visualize the problems at hand. It was extremely useful in identifying exactly where processes broke down, as well as show stakeholders where they could be improved. Building out the cost-benefit analysis allowed us to quantify solutions and clearly show trade-offs. This form of analysis felt like a more honest and useful way to support a real business decision. Working as a team on and assisting a real organization reinforced how crucial our collective quality of analysis had to be in order to drive positive results and make a difference for this cleint.
 
 </div>
 
