@@ -156,7 +156,7 @@ We proposed a structured feedback form capturing satisfaction ratings, service t
 
 **Example EPC Diagram**
 
-![Scheduling Process](/images/Picture2.png)
+![Scheduling Process](/images/schedule.png)
 
 *Follow the arrows to walk the the proposed process for scheduling a tutoring session*
 
