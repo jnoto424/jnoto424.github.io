@@ -146,13 +146,17 @@ There was no structured intake process, as feedback arrived as unstructured emai
 ## Proposed Improvements
 
 **Tutor Application Process**
-*We proposed routing applicants to a dedicated third-party application platform that was capable of collecting structured, comparable data on every application and automatically flagging any incomplete submissions.*
+We proposed routing applicants to a dedicated third-party application platform that was capable of collecting structured, comparable data on every application and automatically flagging any incomplete submissions.
 
 **Individual Tutoring Session Scheduling**
-*We proposed replacing the manual email exchange with a live scheduling integration, which would allow students to view real-time tutor availability and confirm a session in a single step.*
+We proposed replacing the manual email exchange with a live scheduling integration, which would allow students to view real-time tutor availability and confirm a session in a single step.
 
 **Feedback Collection**
-*We proposed a structured feedback form capturing satisfaction ratings, service type, and open comments to give the client a readable dataset rather than unstructured reviews.*
+We proposed a structured feedback form capturing satisfaction ratings, service type, and open comments to give the client a readable dataset rather than unstructured reviews.
+
+**Example EPC Diagram**
+
+*Above is the proposed process for scheduling tutoring sessions and removing the manual setup between client and student*
 
 ## Cost-Benefit Analysis
 
