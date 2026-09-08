@@ -124,7 +124,7 @@
   <p class="hero-eyebrow">Data Analytics · Business Intelligence · Information Systems</p>
 
   <div class="hero-top">
-    <img class="hero-headshot" src="/images/headshot.jpg" alt="Joseph Noto">
+    <img class="hero-headshot" src="/images/0909 MCF Headshots-9546.jpg" alt="Joseph Noto">
     <div>
       <h1>Joseph Noto</h1>
       <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
