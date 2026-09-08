@@ -124,7 +124,7 @@
   <p class="hero-eyebrow">Data Analytics · Business Intelligence · Information Systems</p>
 
   <div class="hero-top">
-    <img class="hero-headshot" src="/images/0909 MCF Headshots-9546.jpg" alt="Joseph Noto">
+    <img class="hero-headshot" src="/images/headshot.jpg" alt="Joseph Noto">
     <div>
       <h1>Joseph Noto</h1>
       <h2>Computer Science Graduate Student at the University of Pennsylvania</h2>
@@ -225,6 +225,10 @@ Bachelor of Science in Management Information Systems
     border-top-color: #7c3aed;
   }
 
+  .project-card.accent-amber {
+    border-top-color: #d97706;
+  }
+
   .project-type {
     margin: 0 0 0.65rem;
     font-size: 0.78rem;
@@ -243,6 +247,10 @@ Bachelor of Science in Management Information Systems
 
   .accent-purple .project-type {
     color: #7c3aed;
+  }
+
+  .accent-amber .project-type {
+    color: #d97706;
   }
 
   .project-card h3 {
@@ -299,6 +307,12 @@ Bachelor of Science in Management Information Systems
     border-color: #7c3aed;
     background: #f5f3ff;
     color: #7c3aed;
+  }
+
+  .accent-amber .project-links a:hover {
+    border-color: #d97706;
+    background: #fffbeb;
+    color: #d97706;
   }
 
   @media (max-width: 700px) {
@@ -362,5 +376,20 @@ Bachelor of Science in Management Information Systems
     </div>
 </article>
 
+  <article class="project-card accent-amber">
+    <p class="project-type">Business Analysis · Process Consulting</p>
+    <h3>Business Process Improvement: Tutoring Services Client</h3>
+    <p>
+      Partnered with a small business client to review current operational
+      processes, map improvements using EPC diagrams, and deliver a
+      cost-benefit analysis of recommended software solutions.
+    </p>
+    <p class="project-tech">
+      Process Mapping · EPC Diagrams · Cost-Benefit Analysis
+    </p>
+    <div class="project-links">
+      <a href="/business-process-improvement">Read More</a>
+    </div>
+  </article>
 
 </div>
