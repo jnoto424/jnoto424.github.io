@@ -156,7 +156,9 @@ We proposed a structured feedback form capturing satisfaction ratings, service t
 
 **Example EPC Diagram**
 
-*Above is the proposed process for scheduling tutoring sessions and removing the manual setup between client and student*
+![Scheduling Process](/images/Picture2.png)
+
+*Follow the arrows to walk the the proposed process for scheduling a tutoring session*
 
 ## Cost-Benefit Analysis
 
